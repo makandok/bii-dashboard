@@ -1,0 +1,130 @@
+/* Copyright (c) Microsoft Corporation.
+Licensed under the MIT license. */
+
+header {
+    background-color: #007FFF;
+    height: 75px;
+    width: 100%;
+}
+
+header > p {
+    color: #FFFFFF;
+    font: bold 1.6em "segoe ui", arial, sans-serif;
+    margin-left: 31px;
+    padding-top: 20px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+section#text-container > div > p {
+    font: 1.2em "segoe ui", arial, sans-serif;
+}
+
+section#report-container {
+    height: calc(0.6 * 65vw);
+}
+@media only screen and (max-width: 575px) {
+    section#report-container {
+        height: calc(0.6 * 100vw); 
+    }
+}
+
+ /* 16:9 aspect ratio */
+ /*
+section#report-container {
+    height: calc(0.5625 * 61vw);
+}
+*/
+
+/* 16:9 aspect ratio */
+/*
+@media only screen and (max-width: 575px) {
+    section#report-container {
+        height: calc(0.5625 * 100vw); 
+    }
+}
+*/
+footer > p {
+    font: 1em "segoe ui", arial, sans-serif;
+}
+
+iframe {
+    border: none;
+}
+
+/* Navigation menu*/
+.header-row .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/*
+    font-size: 18px;
+    font-weight: bold;
+    */
+
+.title {
+    margin-right: 20px;
+    color: #FFFFFF;
+    font: bold 1.6em "segoe ui", arial, sans-serif;
+    margin-left: 31px;
+    padding-top: 20px;
+    }
+/*width: 50px;*/
+.image {  
+  height: 80%;
+  border-radius: 0%;
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 10px 0 10px 0;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  margin: 0px; /* Remove spacing between buttons */
+  width: 100px; /* Set a fixed width for each button */
+  background-color: #6c757d;
+}
+
+/*
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #fds0b5;
+  color: #fff;
+}
+
+*/

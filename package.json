@@ -26,6 +26,7 @@
         "react-bootstrap": "^2.10.10"
     },
     "devDependencies": {
+        "gh-pages": "^6.3.0",
         "nodemon": "^2.0.2"
     }
 }

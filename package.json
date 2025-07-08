@@ -1,8 +1,9 @@
 {
-    "name": "embedding-sample",
+    "name": "dashboard",
     "version": "1.0.0",
-    "description": "Generate Embed Token, URL and Embed the Report.",
+    "description": "Embeds PowerBI Report for use by everyone else",
     "main": "./src/server.js",
+    "homepage": "https://makandok.github.io/bii-dashboard",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "nodemon ./src/server.js",

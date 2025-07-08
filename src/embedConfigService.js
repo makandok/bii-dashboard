@@ -18,10 +18,19 @@ async function getEmbedInfo() {
 
     // Get the Report Embed details
     try {
+        const report_id = process.env.reportId;
+        if (!report_id) {
+            console.log("report id not found");
+        }    
+        const workspace_id = process.env.workspaceId;
+        if (!workspace_id) {
+            console.log("workspace id not found");
+        }
 
         // console.log("Calling getEmbedParamsForSingleReport");
         // Get report details and embed token
-        const embedParams = await getEmbedParamsForSingleReport(config.workspaceId, config.reportId);
+        // const embedParams = await getEmbedParamsForSingleReport(config.workspaceId, config.reportId);
+        const embedParams = await getEmbedParamsForSingleReport(workspace_id, report_id);
 
         // console.log("Printing results from getEmbedParamsForSingleReport");
         // console.log(`Token: ${JSON.stringify(embedParams)}`);
@@ -193,11 +202,17 @@ async function getEmbedTokenForSingleReportSingleWorkspace(reportId, datasetIds,
     // https://learn.microsoft.com/en-us/rest/api/power-bi/embed-token/generate-token#effectiveidentity
     addEffectiveIdentity = false;
     // console.log(`Service principal id: ${config.servicePrincipalObjectId}`);
+    
+    const service_principal_id = process.env.servicePrincipalObjectId;
+    if (!service_principal_id) {
+        console.log("service principal id not found");
+    }
+
     if (addEffectiveIdentity == true) {
         formData['identities'] = [];
         formData['identities'].push(
             {
-                "username": config.servicePrincipalObjectId,                
+                "username": service_principal_id, // config.servicePrincipalObjectId,                
                 "roles":["Dataset.Read.All"],
                 "datasets":[datasetIds[0]]
         })

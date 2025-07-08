@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Embeds PowerBI Report for use by everyone else",
     "main": "./src/server.js",
-    "homepage": "https://makandok.github.io/bii-dashboard",
+    "homepage": "https://makandok.github.io/bii-dashboard/views",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "nodemon ./src/server.js",

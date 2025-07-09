@@ -18,11 +18,11 @@ async function getEmbedInfo() {
 
     // Get the Report Embed details
     try {
-        const report_id = process.env.reportId;
+        const report_id = process.env.REPORTID;
         if (!report_id) {
             console.log("report id not found");
         }    
-        const workspace_id = process.env.workspaceId;
+        const workspace_id = process.env.WORKSPACEID;
         if (!workspace_id) {
             console.log("workspace id not found");
         }
@@ -203,7 +203,7 @@ async function getEmbedTokenForSingleReportSingleWorkspace(reportId, datasetIds,
     addEffectiveIdentity = false;
     // console.log(`Service principal id: ${config.servicePrincipalObjectId}`);
     
-    const service_principal_id = process.env.servicePrincipalObjectId;
+    const service_principal_id = process.env.SERVICEPRINCIPALID;
     if (!service_principal_id) {
         console.log("service principal id not found");
     }

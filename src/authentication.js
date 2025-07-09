@@ -7,11 +7,11 @@ const getAccessToken = async function () {
     // Create a config variable that store credentials from config.json
     const config = require(__dirname + "/../config/config.json");
 
-    const tenant_id = process.env.tenantId;
+    const tenant_id = process.env.TENANTID;
     if (!tenant_id) {
         console.log("Tenant id not found");
     }
-    const client_secret = process.env.clientSecret;
+    const client_secret = process.env.CLIENTSECRET;
     if (!client_secret) {
         console.log("client secret not found");
     }

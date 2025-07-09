@@ -12,11 +12,11 @@ function getAuthHeader(accessToken) {
 }
 
 function validateConfig() {
-    const tenant_id = process.env.tenantId;
+    const tenant_id = process.env.TENANTID;
     if (!tenant_id) {
         console.log("Tenant id not found");
     }
-    const client_secret = process.env.clientSecret;
+    const client_secret = process.env.CLIENTSECRET;
     if (!client_secret) {
         console.log("client secret not found");
     }
@@ -24,15 +24,15 @@ function validateConfig() {
     if (!client_id) {
         console.log("client id not found");
     }    
-    const service_principal_id = process.env.servicePrincipalObjectId;
+    const service_principal_id = process.env.SERVICEPRINCIPALID;
     if (!service_principal_id) {
         console.log("service principal id not found");
     }
-    const report_id = process.env.reportId;
+    const report_id = process.env.REPORTID;
     if (!report_id) {
         console.log("report id not found");
     }    
-    const workspace_id = process.env.workspaceId;
+    const workspace_id = process.env.WORKSPACEID;
     if (!workspace_id) {
         console.log("workspace id not found");
     }
